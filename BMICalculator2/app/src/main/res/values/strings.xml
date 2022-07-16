@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BMI Calculator 2</string>
+    <string name="init_result">Not calculated yet!</string>
+</resources>

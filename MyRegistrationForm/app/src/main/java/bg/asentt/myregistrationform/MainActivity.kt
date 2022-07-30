@@ -14,8 +14,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 class MainActivity : AppCompatActivity() {
 
     private lateinit var createAccountButton: MaterialButton
-    private lateinit var user: UserData
-
 
     private lateinit var spinnerTitle: Spinner
     private lateinit var firstName: TextInputEditText
@@ -57,12 +55,12 @@ class MainActivity : AppCompatActivity() {
     private fun setupButtonClickListener() {
         createAccountButton.setOnClickListener {
             createUserAccount()
-            passUserToSummaryActivity(user)
+            passUserToSummaryActivity(createUserAccount())
         }
     }
 
-    private fun createUserAccount() {
-        user = UserData(
+    private fun createUserAccount(): UserData {
+        return UserData(
             spinnerTitle.selectedItem as String,
             firstName.text.toString(),
             lastName.text.toString(),

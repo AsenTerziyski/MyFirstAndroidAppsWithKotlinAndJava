@@ -3,29 +3,44 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/gradient_back_ground"
+    android:padding="24dp">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Your Account Details" />
+        android:text="@string/your_account_details"
+        android:textSize="16sp"
+        android:textAlignment="center"
+
+        />
 
     <TextView
         android:id="@+id/text_view_user_full_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="Mr full name user" />
+        tools:text="Mr full name user"
+        android:textSize="12sp"
+        android:layout_marginTop="12dp"/>
 
     <TextView
         android:id="@+id/text_view_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="email@address.com" />
+        tools:text="email@address.com"
+        android:textSize="12sp"
+        android:layout_marginTop="12dp"
+        />
 
     <TextView
         android:id="@+id/text_view_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="+359 833 11 22 33" />
+        tools:text="+359 833 11 22 33"
+        android:textSize="12sp"
+        android:layout_marginTop="12dp"
+
+        />
 
 </LinearLayout>

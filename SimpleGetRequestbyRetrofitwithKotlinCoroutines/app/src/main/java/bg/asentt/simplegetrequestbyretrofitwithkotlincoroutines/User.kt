@@ -1,3 +1,3 @@
 package bg.asentt.simplegetrequestbyretrofitwithkotlincoroutines
 
-class Users : ArrayList<UsersItem>()
+class User : ArrayList<UsersItem>()

@@ -7,6 +7,7 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
+//https://www.youtube.com/watch?v=uiPYcSSjNTI
 //https://www.youtube.com/watch?v=kvfpuzSwVZ8
 class MainActivity : AppCompatActivity() {
 

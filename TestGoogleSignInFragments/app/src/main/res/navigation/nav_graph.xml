@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/googleSignInFragment">
+
+    <fragment
+        android:id="@+id/googleSignInFragment"
+        android:name="bg.asenterziyski.testgooglesigninfragments.GoogleSignInFragment"
+        android:label="fragment_google_sign_in"
+        tools:layout="@layout/fragment_google_sign_in" >
+        <action
+            android:id="@+id/action_googleSignInFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="bg.asenterziyski.testgooglesigninfragments.WelcomeFragment"
+        android:label="fragment_welcome"
+        tools:layout="@layout/fragment_welcome" >
+        <argument
+            android:name="accountName"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="accountEmail"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="token"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+</navigation>

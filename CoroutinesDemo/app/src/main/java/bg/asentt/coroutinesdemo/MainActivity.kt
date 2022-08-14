@@ -20,19 +20,26 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-    GlobalScope.launch(Dispatchers.IO) {
-        val time = measureTimeMillis {
-        val answer1 = networkCall1()
-        val answer2 = networkCall2()
-        Log.d(TAG, "Answer one is $answer1")
-        Log.d(TAG, "Answer two is $answer2")
+        GlobalScope.launch(Dispatchers.IO) {
+            val time = measureTimeMillis {
+                val answer1 = async { networkCall1() }
+                val answer2 = async { networkCall2() }
+                Log.d(TAG, "Answer one is ${answer1.await()}")
+                Log.d(TAG, "Answer two is ${answer2.await()}")
+            }
+            Log.d(TAG, "Time is $time ms.")
+
         }
-        Log.d(TAG, "Time is $time ms.")
-    }
 
-
-
-
+//    GlobalScope.launch(Dispatchers.IO) {
+//        val time = measureTimeMillis {
+//        val answer1 = networkCall1()
+//        val answer2 = networkCall2()
+//        Log.d(TAG, "Answer one is $answer1")
+//        Log.d(TAG, "Answer two is $answer2")
+//        }
+//        Log.d(TAG, "Time is $time ms.")
+//    }
 
 
 //        GlobalScope.launch {
@@ -106,12 +113,13 @@ class MainActivity : AppCompatActivity() {
 //
 //        }
     }
-    suspend fun networkCall1() :String {
+
+    suspend fun networkCall1(): String {
         delay(3000L)
         return "Answer1"
     }
 
-    suspend fun networkCall2() :String {
+    suspend fun networkCall2(): String {
         delay(5000L)
         return "Answer2"
     }

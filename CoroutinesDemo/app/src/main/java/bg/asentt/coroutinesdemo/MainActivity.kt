@@ -9,7 +9,8 @@ import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.*
 import kotlin.system.measureTimeMillis
 import kotlin.time.measureTime
-
+//https://www.youtube.com/watch?v=71NrkkRNXG4 - 14.08 - Tova video ne sam go gledal
+//https://www.youtube.com/watch?v=k9yisEEPC8g
 //https://www.youtube.com/watch?v=uiPYcSSjNTI
 //https://www.youtube.com/watch?v=kvfpuzSwVZ8
 class MainActivity : AppCompatActivity() {

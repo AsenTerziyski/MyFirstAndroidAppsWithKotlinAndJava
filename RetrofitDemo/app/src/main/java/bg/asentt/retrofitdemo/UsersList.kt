@@ -1,3 +1,3 @@
 package bg.asentt.retrofitdemo
 
-class UsersList (data: List<User>)
+class UsersList (var data: List<User>)

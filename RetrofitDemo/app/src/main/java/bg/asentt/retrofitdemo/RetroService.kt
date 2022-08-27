@@ -6,7 +6,7 @@ import retrofit2.http.*
 
 interface RetroService {
 
-    //https://gorest.co.in/public-api/users
+    // https://gorest.co.in/public-api/users
     @GET("users")
     @Headers("Accept:application/json", "Content-Type:application/json")
     fun getUsersList(): Call<UsersList>

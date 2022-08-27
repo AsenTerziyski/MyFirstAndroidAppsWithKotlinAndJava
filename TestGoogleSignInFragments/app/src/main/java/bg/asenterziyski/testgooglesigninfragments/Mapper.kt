@@ -8,7 +8,12 @@ class Mapper {
         return GoogleAccount(
             account.displayName,
             account.email,
-            account.id
+            account.id,
+            account.idToken,
+            account.isExpired,
+            account.account?.type,
+            account.serverAuthCode,
+            account.photoUrl.toString()
         )
     }
 }

@@ -6,17 +6,24 @@ import android.content.Intent
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.gms.common.Scopes
+import com.google.android.gms.common.api.Scope
 import com.google.android.gms.tasks.Task
 
 class GoogleSignInRepository(anActivity: Context) {
 
     private val gso = GoogleSignInOptions
         .Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+        .requestScopes(Scope(Scopes.DRIVE_APPFOLDER))
+        .requestIdToken("???ClientId")
+        .requestServerAuthCode("???ClientId")
+        .requestProfile()
         .requestEmail()
         .requestId()
         .build()
 
     private val gsc = GoogleSignIn.getClient(anActivity, gso)
+
 
     fun hasLastSignInAccount(context: Context): Boolean {
         return getAccount(context) != null

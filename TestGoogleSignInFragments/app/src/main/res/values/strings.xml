@@ -8,4 +8,9 @@
     <string name="name">name</string>
     <string name="welcome">WELCOME</string>
     <string name="token">token</string>
+    <string name="id">id</string>
+    <string name="expired">expired</string>
+    <string name="accounttype">accountType</string>
+    <string name="serverAuthType">serverAuthType</string>
+    <string name="photourl">photoUrl</string>
 </resources>

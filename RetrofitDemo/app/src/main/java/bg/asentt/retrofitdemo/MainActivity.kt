@@ -20,6 +20,8 @@ also watch this: https://www.youtube.com/watch?v=ARpn-1FPNE4&list=PLrnPJCHvNZuDi
 https://gorest.co.in/
 https://www.youtube.com/watch?v=TJpk7ezvtGo - do 27min
 https://github.com/ravizworldz/retrofit2_post_patch_delete
+
+m v v n explained (increase int demo) -> https://www.youtube.com/watch?v=orH4K6qBzvE
  */
 class MainActivity : AppCompatActivity() {
 

@@ -1,18 +1,24 @@
 package bg.asenterziyski.testgooglesigninfragments
 
+import android.R.attr.data
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
+import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import bg.asenterziyski.testgooglesigninfragments.databinding.FragmentGoogleSignInBinding
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount
+import com.google.android.gms.common.api.ApiException
+import com.google.android.gms.tasks.Task
 
 
 class GoogleSignInFragment : Fragment() {
@@ -68,11 +74,49 @@ class GoogleSignInFragment : Fragment() {
         navController = findNavController()
         NavigationUI.setupActionBarWithNavController(context as AppCompatActivity, navController)
         val account = googleSignInRepo?.getAccount(context)
-        val action = GoogleSignInFragmentDirections.actionGoogleSignInFragmentToWelcomeFragment(
-            account?.name,
-            account?.email,
-            account?.id
-        )
+
+        Log.d("TAG", "Name: ${account?.name}")
+        Log.d("TAG", "Email: ${account?.email}")
+        Log.d("TAG", "Id: ${account?.id}")
+        Log.d("TAG", "IdToken: ${account?.idToken}")
+        Log.d("TAG", "Expired: ${account?.expired}")
+        Log.d("TAG", "AccountType: ${account?.accountType}")
+        Log.d("TAG", "ServerAuthCode: ${account?.serverAuthCode}")
+        Log.d("TAG", "PhotoUrl: ${account?.photoUrl}")
+
+        val task: Task<GoogleSignInAccount> = GoogleSignIn.getSignedInAccountFromIntent(googleSignInRepo?.getSignInIntent())
+        try {
+            val account: GoogleSignInAccount = task.getResult(ApiException::class.java)
+            val authCode = account.serverAuthCode
+            Log.d("TAG", "ServerAuthCode: ${account?.serverAuthCode}")
+            // TODO: send code to server and exchange for access/refresh/ID tokens
+        } catch (e: ApiException) {
+            Log.d("TAG", "ApiException: $e")
+        }
+
+
+        val action: NavDirections = account?.let {
+            GoogleSignInFragmentDirections.actionGoogleSignInFragmentToWelcomeFragment(
+                it.name,
+                it.email,
+                it.id,
+                it.idToken,
+                it.expired,
+                it.accountType,
+                it.serverAuthCode,
+                it.photoUrl
+            )
+        }
+            ?: GoogleSignInFragmentDirections.actionGoogleSignInFragmentToWelcomeFragment(
+                "N/A",
+                "N/A",
+                "N/A",
+                "N/A",
+                true,
+                "N/A",
+                "N/A",
+                "N/A"
+            )
         navController.navigate(action)
     }
 

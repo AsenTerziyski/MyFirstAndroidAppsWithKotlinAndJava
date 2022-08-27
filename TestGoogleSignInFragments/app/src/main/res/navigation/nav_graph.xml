@@ -28,7 +28,26 @@
             app:argType="string"
             app:nullable="true" />
         <argument
-            android:name="token"
+            android:name="id"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="idToken"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="expired"
+            app:argType="boolean" />
+        <argument
+            android:name="accountType"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="serverAuthCode"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="photoUrl"
             app:argType="string"
             app:nullable="true" />
     </fragment>

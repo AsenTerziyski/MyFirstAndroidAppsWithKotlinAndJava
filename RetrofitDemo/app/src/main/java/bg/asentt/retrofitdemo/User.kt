@@ -1,9 +1,9 @@
 package bg.asentt.retrofitdemo
 
 data class User(
-    val email: String?,
-    val gender: String?,
-    val id: Int?,
+    val id: String?,
     val name: String?,
-    val status: String?
+    val email: String?,
+    val status: String?,
+    val gender: String?
 )

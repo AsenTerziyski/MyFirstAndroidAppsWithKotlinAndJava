@@ -17,15 +17,15 @@ interface RetroService {
     fun searchUsers(@Query(value = "name") searchText: String): Call<UsersList>
 
     //https://gorest.co.in/public-api/users/100
-    @GET("users/{users_id}")
+    @GET("users/{user_id}")
     @Headers("Accept:application/json", "Content-Type:application/json")
-    fun getUserById(@Path(value = "users_id") user_id: String): Call<UsersList>
+    fun getUserById(@Path(value = "users_id") user_id: String?): Call<UserResponse>
 
     @POST("users")
     @Headers(
         "Accept:application/json",
         "Content-Type:application/json",
-        "Authorization: Bearer ???"
+        "Authorization: Bearer "
     )
     fun createUser(@Body params: User): Call<UserResponse>
 
@@ -33,7 +33,7 @@ interface RetroService {
     @Headers(
         "Accept:application/json",
         "Content-Type:application/json",
-        "Authorization: Bearer ???"
+        "Authorization: Bearer "
     )
     fun updateUser(@Path("users/{users_id}") user_id: String, @Body params: User) :Call<UserResponse>
 
@@ -42,7 +42,7 @@ interface RetroService {
     @Headers(
         "Accept:application/json",
         "Content-Type:application/json",
-        "Authorization: Bearer ???"
+        "Authorization: Bearer "
     )
     fun deleteUser(@Path("users/{users_id}") user_id: String) :Call<UserResponse>
 

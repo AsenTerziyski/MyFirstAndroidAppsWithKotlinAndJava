@@ -12,6 +12,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import java.util.*
 
+// https://rickandmortyapi.com/
 
 // PART 1 -> https://www.youtube.com/watch?v=s1jqC70uO7Q
 // PART 2 -> https://www.youtube.com/watch?v=eUQebUJLnXI&list=PLDP3jMsmhGQVSkNFQKqNKnGNYUTMuV6W7&index=1

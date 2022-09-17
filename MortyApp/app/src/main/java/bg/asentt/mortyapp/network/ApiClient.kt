@@ -30,8 +30,8 @@ object ApiClient {
 
 }
 
-interface ApiService {
-    //https://rickandmortyapi.com/api/character/?page=19
-    @GET("character")
-    fun fetchCharacters(@Query("page") page: String): Call<CharacterResponse>
-}
+//interface ApiService {
+//    //https://rickandmortyapi.com/api/character/?page=19
+//    @GET("character")
+//    fun fetchCharacters(@Query("page") page: String): Call<CharacterResponse>
+//}

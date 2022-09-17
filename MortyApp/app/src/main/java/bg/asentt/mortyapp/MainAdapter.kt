@@ -37,8 +37,7 @@ class MainAdapter(private val charactersList: List<Character>) :
     }
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
-        holder
-            .bindData(charactersList[position])
+        holder.bindData(charactersList[position])
     }
 
     override fun getItemCount(): Int {

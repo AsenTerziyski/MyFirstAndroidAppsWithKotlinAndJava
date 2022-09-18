@@ -23,15 +23,12 @@ class MainAdapter(private val charactersList: List<Character>) :
             image.load(character.image) {
                 transformations(CircleCropTransformation())
             }
-
         }
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
         return MainViewHolder(
-            LayoutInflater
-                .from(parent.context)
+            LayoutInflater.from(parent.context)
                 .inflate(R.layout.rv_item, parent, false)
         )
     }

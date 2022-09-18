@@ -2,11 +2,9 @@ package bg.asentt.mortyapp.network
 
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
-import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
-import retrofit2.http.GET
-import retrofit2.http.Query
+
 
 object ApiClient {
     private const val BASE_URL = "https://rickandmortyapi.com/api/"
@@ -27,11 +25,4 @@ object ApiClient {
     val apiService: ApiService by lazy {
         retrofit.create(ApiService::class.java)
     }
-
 }
-
-//interface ApiService {
-//    //https://rickandmortyapi.com/api/character/?page=19
-//    @GET("character")
-//    fun fetchCharacters(@Query("page") page: String): Call<CharacterResponse>
-//}

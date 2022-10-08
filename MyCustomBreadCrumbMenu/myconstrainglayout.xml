@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@id/custom"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_nav_category"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:focusable="true"
+        android:src="@drawable/signal_ellipse"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/line_category_location"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/category"
+        android:textColor="#61646B"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/iv_nav_category"
+        app:layout_constraintStart_toStartOf="@id/iv_nav_category"
+        app:layout_constraintTop_toBottomOf="@id/iv_nav_category" />
+
+    <ImageView
+        android:id="@+id/line_category_location"
+        android:layout_width="49dp"
+        android:layout_height="0dp"
+        android:src="@drawable/signal_line_86"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_nav_location"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/iv_nav_category"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_nav_location"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/signal_elipse2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/line_location_photo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/line_category_location"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/location"
+        android:textColor="#61646B"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/iv_nav_location"
+        app:layout_constraintStart_toStartOf="@+id/iv_nav_location"
+        app:layout_constraintTop_toBottomOf="@id/iv_nav_location" />
+
+    <ImageView
+        android:id="@+id/line_location_photo"
+        android:layout_width="49dp"
+        android:layout_height="0dp"
+        android:src="@drawable/signal_line_86_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_nav_photo"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/iv_nav_location"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_nav_photo"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/signal_elipse4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/line_photo_description"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/line_location_photo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/photo"
+        android:textColor="#61646B"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_nav_photo"
+        app:layout_constraintStart_toStartOf="@+id/iv_nav_photo"
+        app:layout_constraintTop_toBottomOf="@+id/iv_nav_photo" />
+
+    <ImageView
+        android:id="@+id/line_photo_description"
+        android:layout_width="49dp"
+        android:layout_height="0dp"
+        android:src="@drawable/signal_line_86_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_nav_description"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/iv_nav_photo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_nav_description"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/signal_elipse4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/line_description_overview"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/line_photo_description"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/description"
+        android:textColor="#61646B"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_nav_description"
+        app:layout_constraintStart_toStartOf="@+id/iv_nav_description"
+        app:layout_constraintTop_toBottomOf="@+id/iv_nav_description" />
+
+    <ImageView
+        android:id="@+id/line_description_overview"
+        android:layout_width="49dp"
+        android:layout_height="0dp"
+        android:src="@drawable/signal_line_86_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_nav_overview"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/iv_nav_description"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_nav_overview"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/signal_elipse4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toEndOf="@+id/line_description_overview"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/overview"
+        android:textColor="#61646B"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/iv_nav_overview"
+        app:layout_constraintStart_toStartOf="@+id/iv_nav_overview"
+        app:layout_constraintTop_toBottomOf="@+id/iv_nav_overview" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

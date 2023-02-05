@@ -1,0 +1,18 @@
+
+@kotlin:S108c")Either remove or fill this block of code.(å¥‡
+Akotlin:S1481^")Remove this unused "scan" local variable.(½®£ß
+6kotlin:S125T"Remove this commented out code.(‘ÿÁ
+;kotlin:S1874I"#Deprecated code should not be used.(ß‹‡Ù
+@kotlin:S1874S"#Deprecated code should not be used.(§à¡ÿúÿÿÿÿ
+;kotlin:S1874X"#Deprecated code should not be used.(£×Á
+@kotlin:S1874]"#Deprecated code should not be used.(ùÈ¿ëøÿÿÿÿ
+@kotlin:S1874t"#Deprecated code should not be used.(§à¡ÿúÿÿÿÿ
+Akotlin:S1874€"#Deprecated code should not be used.(ı²ñ¸úÿÿÿÿ
+<kotlin:S1874"#Deprecated code should not be used.(şÅªé
+;kotlin:S1874‚"#Deprecated code should not be used.(Äº‚B
+Akotlin:S1874ƒ"#Deprecated code should not be used.(¥ ä±úÿÿÿÿ
+Akotlin:S1874„"#Deprecated code should not be used.(•Äòıÿÿÿÿ
+<kotlin:S1874…"#Deprecated code should not be used.(£×Á
+:kotlin:S1874"#Deprecated code should not be used.(ÏÑîG
+Akotlin:S1874€"#Deprecated code should not be used.(ı²ñ¸úÿÿÿÿ
+okotlin:S3776"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(¶Á»¬şÿÿÿÿ
